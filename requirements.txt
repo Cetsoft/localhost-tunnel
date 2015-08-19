@@ -2,3 +2,5 @@ flask
 haikunator
 Nginxparser
 mongoengine
+paramiko
+gunicorn
