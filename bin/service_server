@@ -1,3 +1,4 @@
+#!python
 from macun.service.router import app
 
 
