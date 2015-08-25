@@ -72,6 +72,10 @@ setup(
 
     packages=find_packages(exclude=['contrib', 'docs', 'tests*']),
 
+    setup_requires=[
+        "flake8"
+    ],
+
     tests_require=['pytest'],
     
     extras_require={
