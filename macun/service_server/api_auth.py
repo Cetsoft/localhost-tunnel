@@ -1,8 +1,10 @@
 from functools import wraps
 from flask import request, Response, abort
 
+
 def check_auth(key):
 	return key == "helloworld"
+
 
 def requires_keyauth(f):
 	@wraps(f)
