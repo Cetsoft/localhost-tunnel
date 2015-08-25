@@ -4,3 +4,5 @@ Nginxparser
 mongoengine
 paramiko
 gunicorn
+requests
+msgpack
