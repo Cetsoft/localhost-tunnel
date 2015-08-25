@@ -1,7 +1,7 @@
 from flask import Flask
 from werkzeug.contrib.fixers import ProxyFix
-from basicauth import requires_auth
-from apiauth import requires_keyauth
+from macun.service_server.basic_auth import requires_auth
+from macun.service_server.api_auth import requires_keyauth
 
 
 app = Flask(__name__)
