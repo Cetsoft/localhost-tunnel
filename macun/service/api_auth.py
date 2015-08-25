@@ -6,7 +6,7 @@ def check_auth(key):
     return key == "helloworld"
 
 
-def requires_keyauth(f):
+def requires_key_auth(f):
     @wraps(f)
     def decorated(*args, **kwargs):
         key = request.args.get('apikey', '')
