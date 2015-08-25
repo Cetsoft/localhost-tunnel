@@ -3,14 +3,15 @@ from flask import request, Response, abort
 
 
 def check_auth(key):
-	return key == "helloworld"
+    return key == "helloworld"
 
 
 def requires_keyauth(f):
-	@wraps(f)
-	def decorated(*args, **kwargs):
-		key = request.args.get('apikey','')
-		if not key or not check_auth(key):
-			return abort(401)
-		return f(*args, **kwargs)
-	return decorated
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        key = request.args.get('apikey', '')
+        if not key or not check_auth(key):
+            return abort(401)
+        return f(*args, **kwargs)
+
+    return decorated

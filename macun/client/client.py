@@ -3,24 +3,24 @@ import requests
 
 
 def authenticate(username, password):
-	pass
+    pass
 
 
 def create_public_key():
-	pass
+    pass
 
 
 def get_public_key():
-	pass
+    pass
 
 
 def is_internet_alive():
-	pass
+    pass
 
 
 def is_port_alive(port):
-	pass
+    pass
 
 
 def forward_port(auth_uid, public_key, port):
-	pass
+    pass

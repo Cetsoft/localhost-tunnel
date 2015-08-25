@@ -11,14 +11,14 @@ app.wsgi_app = ProxyFix(app.wsgi_app)
 @app.route("/")
 @requires_auth
 def main():
-	return "Hello World"
+    return "Hello World"
 
 
 @app.route("/key")
 @requires_keyauth
 def index():
-	return "Hello World"
+    return "Hello World"
 
 
 if __name__ == '__main__':
-	app.run()
+    app.run()
