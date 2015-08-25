@@ -1,7 +1,12 @@
 import sys
+from pip.req import parse_requirements
+from pip.download import PipSession
 from setuptools import setup, find_packages
 from setuptools.command.test import test as TestCommand
 
+
+install_pip_reqs = parse_requirements("requirements.txt", session=PipSession())
+install_reqs = [str(install_req.req) for install_req in install_pip_reqs]
 
 class PyTest(TestCommand):
     user_options = [('pytest-args=', 'a', "Arguments to pass to py.test")]
@@ -70,9 +75,7 @@ setup(
         "flake8"
     ],
 
-    install_requires=[
-        'Flask>=0.1'
-    ],
+    install_requires=install_reqs,
 
     tests_require=['pytest'],
     
